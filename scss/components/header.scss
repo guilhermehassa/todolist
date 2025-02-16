@@ -1,0 +1,31 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.header{
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  background-color: var(--green);
+  padding: 0.4rem 0;
+
+  height: var(--headerHeight);
+
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+
+  h1{
+    font-weight: 400;
+    line-height: 100%;
+    color: #ffffff;
+  }
+
+  img{
+    height: 40px;
+    width: auto;
+  }
+}

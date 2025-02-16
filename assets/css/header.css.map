@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "header.css",
+	"sources": [
+		"../../scss/header.scss"
+	],
+	"sourcesContent": [
+		"body{background-color: red;}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,IAAI,AAAA,CAAC,gBAAgB,CAAE,GAAG,CAAG"
+}

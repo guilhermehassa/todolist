@@ -1,0 +1,54 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.popup{
+  position: fixed;
+  z-index: 100;
+  top: 50%; left: 50%;
+  translate: -50% -50%;
+
+  max-height: 0;max-width: 0;
+  overflow: hidden;
+
+  background-color: #ffffff;
+  opacity: 0;
+
+  transition: 0.3s opacity;
+
+  text-align: center;
+
+
+
+  &.active{
+    max-width: 100%;
+    max-height: 100vh;
+
+    opacity: 1;
+
+    padding: px-to-rem(8px);
+    @include media-breakpoint-up(lg){
+      padding: px-to-rem(16px);
+    }
+  }
+
+  &:not(.active) {
+    transition: opacity 0.6s, max-height 0s 0.7s, max-width 0s 0.7s, padding 0s 0.7s;
+  }
+
+  .title{
+    color: var(--green);
+  }
+
+  &_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: px-to-rem(12px);
+
+    @include media-breakpoint-up(lg){
+      flex-direction: row;
+    }
+  }
+
+}
